@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Advanced Search</title>
+    <link rel="stylesheet" href="css/advanced.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Google Advanced Search</h1>
+        <form id="advanced-search-form" class="form" action="https://www.google.com/search" method="get">
+            <label for="exact-phrase" >Exact phrase:</label>
+            <input type="text" id="exact-phrase" name="exact-phrase" placeholder="Enter exact phrase">
+
+            <label for="any-words">Any of these words:</label>
+            <input type="text" id="any-words" name="any-words" placeholder="Enter words separated by spaces">
+
+            <label for="none-words">None of these words:</label>
+            <input type="text" id="none-words" name="none-words" placeholder="Enter words to exclude">
+
+            <label for="site-or-domain">Site or domain:</label>
+            <input type="text" id="site-or-domain" name="site-or-domain" placeholder="Enter a specific site or domain">
+
+            <button type="submit" class="btn">Advanced Search</button>
+        </form>
+        <p><a href="index.html">Return to Google Search</a></p>
+    </div>
+    <script src="js/advanced.js"></script>
+</body>
+</html>
