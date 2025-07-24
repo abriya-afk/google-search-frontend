@@ -4,19 +4,15 @@ document.addEventListener('DOMContentLoaded', function() {
     advancedSearchForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        const query = document.getElementById('query').value;
+        // Get values from the correct input IDs
         const exactPhrase = document.getElementById('exact-phrase').value;
-        const excludeWords = document.getElementById('exclude-words').value;
+        const anyWords = document.getElementById('any-words').value;
+        const noneWords = document.getElementById('none-words').value;
         const siteOrDomain = document.getElementById('site-or-domain').value;
 
-        const searchParams = new URLSearchParams({
-            q: query,
-            exact: exactPhrase,
-            exclude: excludeWords,
-            site: siteOrDomain
-        });
+        // Build the Google advanced search URL
+        const url = `https://www.google.com/search?as_epq=${encodeURIComponent(exactPhrase)}&as_oq=${encodeURIComponent(anyWords)}&as_eq=${encodeURIComponent(noneWords)}&as_sitesearch=${encodeURIComponent(siteOrDomain)}`;
 
-        const searchUrl = `https://www.google.com/search?${searchParams.toString()}`;
-        window.location.href = searchUrl;
+        window.location.href = url;
     });
 });

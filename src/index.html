@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for responsive design and character encoding -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Search</title>
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
+        <!-- Google logo/title -->
         <h1>Google</h1>
+        <!-- Main search form -->
         <form id="search-form" action="https://www.google.com/search" method="get">
+            <!-- Search input field -->
             <input type="text" name="q" placeholder="Search Google or type a URL" required>
             <div class="buttons">
+                <!-- Submit button for standard search -->
                 <button type="submit">Google Search</button>
+                <!-- "I'm Feeling Lucky" button triggers form submission -->
                 <button type="button" onclick="document.getElementById('search-form').submit();">I'm Feeling Lucky</button>
             </div>
         </form>
         <div class="links">
+            <!-- Link to image search page -->
             <a href="images.html">Google Image Search           </a>
+            <!-- Link to advanced search page -->
             <a href="advanced.html">Google Advanced Search</a>
         </div>
     </div>
+    <!-- Main JavaScript file -->
     <script src="js/main.js"></script>
 </body>
 </html>
